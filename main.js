@@ -1,9 +1,18 @@
 var actorList = require('./actor_list.js');
 
-actorList('female', 1, function(err, data) {
-  if(err)
-    console.log(err.stack);
+function init() {
+    var maleActorList = [],
+        femaleActorList = [];
 
-  if(data)
-    console.log(data);
-});
+    // Fetch all the female actors
+        actorList('female', 1, 500, function(err, data) {
+            if (err)
+                console.log(err.stack);
+
+            if (data)
+            console.log(data);
+        })
+
+}
+
+init();
