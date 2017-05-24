@@ -9,7 +9,7 @@ function init() {
         output = [];
 
     console.log("The number of actors in the file: " + data.length);
-    getActorBirthday(data.splice(0, 200), output);
+    getActorBirthday(data, output);
 }
 
 
